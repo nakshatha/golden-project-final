@@ -28,7 +28,7 @@ function setup() {
   invisibleright.visible=false
   hydrogenBubblegroup=createGroup()
   obstaclegroup=createGroup()
-  rocketsound.loop()
+  //rocketsound.loop()
 
   
 }
@@ -43,9 +43,11 @@ function draw() {
     //console.log("i am inside if")
   if(keyDown("right")){
     rocket.x = rocket.x+4
+    rocketsound.play()
   }
   if(keyDown("left")){
     rocket.x=rocket.x-4
+    rocketsound.play()
   }
   rocket.collide(invisibleright)
   rocket.collide(invisibleleft)
